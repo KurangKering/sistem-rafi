@@ -1,0 +1,19 @@
+{
+    "name": "kurangkering/gayo-stemmer",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "authors": [
+        {
+            "name": "KurangKering",
+            "email": "cybercature@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"KurangKering\\GayoStemmer\\": "src/"}
+    },
+    "require": {},
+    "minimum-stability": "dev"  
+
+}
