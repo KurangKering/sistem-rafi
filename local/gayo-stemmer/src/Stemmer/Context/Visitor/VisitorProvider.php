@@ -22,124 +22,124 @@ class VisitorProvider
     {
 
         $this->prefixVisitors[] = new PrefixDisambiguator(
-            new Disambiguator\DisambiguatorPrefixMu()
+            array(new Disambiguator\DisambiguatorPrefixMu())
         );
 
         $this->prefixVisitors[] = new PrefixDisambiguator(
-            new Disambiguator\DisambiguatorPrefixPe()
+            array(new Disambiguator\DisambiguatorPrefixPe())
         );
 
         $this->prefixVisitors[] = new PrefixDisambiguator(
-            new Disambiguator\DisambiguatorPrefixBersi()
+            array(new Disambiguator\DisambiguatorPrefixBersi())
         );   
 
         $this->prefixVisitors[] = new PrefixDisambiguator(
-            new Disambiguator\DisambiguatorPrefixBeR()
+            array(new Disambiguator\DisambiguatorPrefixBeR())
         );  
 
         $this->prefixVisitors[] = new PrefixDisambiguator(
-            new Disambiguator\DisambiguatorPrefixBe()
+            array(new Disambiguator\DisambiguatorPrefixBe())
         );  
 
         $this->prefixVisitors[] = new PrefixDisambiguator(
-            new Disambiguator\DisambiguatorPrefixKe()
+            array(new Disambiguator\DisambiguatorPrefixKe())
         );  
 
         $this->prefixVisitors[] = new PrefixDisambiguator(
-            new Disambiguator\DisambiguatorPrefixTe()
+            array(new Disambiguator\DisambiguatorPrefixTe())
         );   
 
         $this->prefixVisitors[] = new PrefixDisambiguator(
-            new Disambiguator\DisambiguatorPrefixPet()
+            array(new Disambiguator\DisambiguatorPrefixPet())
         );  
 
         $this->prefixVisitors[] = new PrefixDisambiguator(
-            new Disambiguator\DisambiguatorPrefixI()
+            array(new Disambiguator\DisambiguatorPrefixI())
         );   
 
         $this->prefixVisitors[] = new PrefixDisambiguator(
-            new Disambiguator\DisambiguatorPrefixKu()
+            array(new Disambiguator\DisambiguatorPrefixKu())
         );
 
-          $this->prefixVisitors[] = new PrefixDisambiguator(
-            new Disambiguator\DisambiguatorSuffixAn()
+        $this->prefixVisitors[] = new PrefixDisambiguator(
+            array(new Disambiguator\DisambiguatorSuffixAn())
         );
 
         $this->prefixVisitors[] = new PrefixDisambiguator(
 
-            new Disambiguator\DisambiguatorPrefixSe(),
+            array(new Disambiguator\DisambiguatorPrefixSe())
         );
 
         $this->suffixVisitors[] = new PrefixDisambiguator(
 
-            new Disambiguator\DisambiguatorSuffixEn(),
+            array(new Disambiguator\DisambiguatorSuffixEn())
         );
 
         $this->suffixVisitors[] = new PrefixDisambiguator(
 
-            new Disambiguator\DisambiguatorSuffixMi(),
+            array(new Disambiguator\DisambiguatorSuffixMi())
         );
         $this->suffixVisitors[] = new PrefixDisambiguator(
 
-            new Disambiguator\DisambiguatorSuffixI(),
-        );
-
-
-        $this->suffixVisitors[] = new PrefixDisambiguator(
-
-            new Disambiguator\DisambiguatorSuffixKu(),
-        );
-
-        $this->suffixVisitors[] = new PrefixDisambiguator(
-
-            new Disambiguator\DisambiguatorSuffixMu(),
-        );
-
-        $this->suffixVisitors[] = new PrefixDisambiguator(
-
-            new Disambiguator\DisambiguatorSuffixTe(),
+            array(new Disambiguator\DisambiguatorSuffixI())
         );
 
 
         $this->suffixVisitors[] = new PrefixDisambiguator(
 
-            new Disambiguator\DisambiguatorSuffixKe(),
+            array(new Disambiguator\DisambiguatorSuffixKu())
         );
 
         $this->suffixVisitors[] = new PrefixDisambiguator(
 
-            new Disambiguator\DisambiguatorSuffixLe(),
+            array(new Disambiguator\DisambiguatorSuffixMu())
+        );
+
+        $this->suffixVisitors[] = new PrefixDisambiguator(
+
+            array(new Disambiguator\DisambiguatorSuffixTe())
+        );
+
+
+        $this->suffixVisitors[] = new PrefixDisambiguator(
+
+            array(new Disambiguator\DisambiguatorSuffixKe())
+        );
+
+        $this->suffixVisitors[] = new PrefixDisambiguator(
+
+            array(new Disambiguator\DisambiguatorSuffixLe())
         );
 
 
 
         $this->suffixVisitors[] = new PrefixDisambiguator(
 
-            new Disambiguator\DisambiguatorSuffixPe(),
+            array(new Disambiguator\DisambiguatorSuffixPe())
         );
 
         $this->suffixVisitors[] = new PrefixDisambiguator(
 
-            new Disambiguator\DisambiguatorSuffixNe(),
+            array(new Disambiguator\DisambiguatorSuffixNe())
         );
 
         $this->infixVisitors[] = new PrefixDisambiguator(
 
-            new Disambiguator\DisambiguatorInfixEm(),
+            array(new Disambiguator\DisambiguatorInfixEm())
         );
 
         $this->infixVisitors[] = new PrefixDisambiguator(
 
-            new Disambiguator\DisambiguatorInfixEn(),
+            array(new Disambiguator\DisambiguatorInfixEn())
         );
         $this->suffixVisitors[] = new PrefixDisambiguator(
 
-            new Disambiguator\DisambiguatorSuffixE(),
+            array(new Disambiguator\DisambiguatorSuffixE())
         );
 
         $this->suffixVisitors[] = new PrefixDisambiguator(
 
-            new Disambiguator\DisambiguatorSuffixA(),
+            array(new Disambiguator\DisambiguatorSuffixA())
         );
 
         

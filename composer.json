@@ -16,7 +16,8 @@
         "ozdemir/datatables": "^2.3",
         "kurangkering/gayo-stemmer": "@dev",
         "tightenco/collect": "^8.34",
-        "phpoffice/phpspreadsheet": "^1.18"
+        "phpoffice/phpspreadsheet": "^1.18",
+        "kurangkering/gayo-stemmer-dev": "@dev"
     },
     "require-dev": {
         "codeigniter4/codeigniter4-standard": "^1.0",
@@ -53,6 +54,10 @@
         "0": {
             "type": "path",
             "url": "local/gayo-stemmer"
+        },
+        "1": {
+            "type": "path",
+            "url": "local/gayo-stemmer-dev"
         }
     }
 }

@@ -5,7 +5,7 @@ namespace App\Controllers;
 use CodeIgniter\RESTful\ResourceController;
 use App\Models\DataUjiModel;
 use App\Models\KataDasarModel;
-use KurangKering\GayoStemmer\Stemmer;
+use KurangKering\GayoStemmerDev\Stemmer;
 use Tightenco\Collect\Support\Collection;
 class PengujianController extends ResourceController
 {

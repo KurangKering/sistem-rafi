@@ -13,7 +13,7 @@ class DisambiguatorSuffixE extends AbstractDisambiguator implements Disambiguato
     public function disambiguate($word)
     {
         $matches  = null;
-        $contains = preg_match('/^(.*)e$/', $word, $matches);
+        $contains = preg_match('/^(.*[a-z])e$/', $word, $matches);
 
         if ($contains === 1) {
             return $matches[1];

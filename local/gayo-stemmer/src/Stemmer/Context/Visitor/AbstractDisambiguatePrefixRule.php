@@ -10,11 +10,20 @@ abstract class AbstractDisambiguatePrefixRule implements VisitorInterface
 {
     protected $disambiguators = array();
 
+    protected $current_disambiguator = null;
+
+
     public function visit(ContextInterface $context)
     {
         $result = null;
+        foreach ($this->disambiguators as $disambiguator) {
+            $result = $disambiguator->disambiguate($context->getCurrentWord());
+            $this->current_disambiguator = $disambiguator;
 
-        $result = $this->disambiguator->disambiguate($context->getCurrentWord());
+            if ($context->getDictionary()->contains($result)) {
+                break;
+            }
+        }
 
         if ($result === null) {
             return;
@@ -26,22 +35,28 @@ abstract class AbstractDisambiguatePrefixRule implements VisitorInterface
             $context->getCurrentWord(),
             $result,
             $removedPart,
-            $this->disambiguator->getRule(),
+            $this->current_disambiguator->getRule(),
         );
 
         $context->addRemoval($removal);
         $context->setCurrentWord($result);
     }
 
-   
 
-    public function addDisambiguator(DisambiguatorInterface $disambiguator)
-    {
-        $this->disambiguator = $disambiguator;
-    }
 
     public function getRule()
     {
-        return $this->disambiguator->getRule();
+        return $this->current_disambiguator->getRule();
+    }
+    public function addDisambiguators(array $disambiguators)
+    {
+        foreach ($disambiguators as $disambiguator) {
+            $this->addDisambiguator($disambiguator);
+        }
+    }
+
+    public function addDisambiguator(DisambiguatorInterface $disambiguator)
+    {
+        $this->disambiguators[] = $disambiguator;
     }
 }

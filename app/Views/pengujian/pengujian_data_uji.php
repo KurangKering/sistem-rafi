@@ -74,6 +74,7 @@
 									<th>ID</th>
 									<th>kata</th>
 									<th>kata stemmed</th>
+									<th>ketemu</th>
 									<th width="1%">Action</th>
 								</tr>
 							</thead>
@@ -217,12 +218,19 @@
 			{ "data": "id" },
 			{ "data": "kata" },
 			{ "data": "kata_stemmed" },
+			{ "data": "ketemu" },
 			{ "data": null },
 			],
+			"order": [[3, "desc"]],
 			"columnDefs": [
 			{
+				"targets": 3,
+				"data": "ketemu",
+				"visible": false,
+			},
+			{
 				"targets": 2,
-				"data": null,
+				"data": "kata_stemmed",
 				"render" : function(data, type, row) {
 					text_color = 'red';
 

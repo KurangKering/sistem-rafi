@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "72a06198267c4db80b9ddcc478016f3d",
+    "content-hash": "5ed7d0487d2e878f64031d886bddc666",
     "packages": [
         {
             "name": "ezyang/htmlpurifier",
@@ -149,6 +149,33 @@
             "autoload": {
                 "psr-4": {
                     "KurangKering\\GayoStemmer\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "KurangKering",
+                    "email": "cybercature@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "kurangkering/gayo-stemmer-dev",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "local/gayo-stemmer-dev",
+                "reference": "c886eb5784f9c9c5397e044b7d0bd2253234d9c9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "KurangKering\\GayoStemmerDev\\": "src/"
                 }
             },
             "authors": [
@@ -3789,7 +3816,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "kurangkering/gayo-stemmer": 20
+        "kurangkering/gayo-stemmer": 20,
+        "kurangkering/gayo-stemmer-dev": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

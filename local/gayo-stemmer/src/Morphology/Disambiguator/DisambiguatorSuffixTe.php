@@ -13,7 +13,7 @@ class DisambiguatorSuffixTe extends AbstractDisambiguator implements Disambiguat
     public function disambiguate($word)
     {
         $matches  = null;
-        $contains = preg_match('/^(.*)te$/', $word, $matches);
+        $contains = preg_match('/^(.*[bcdfghjklmnpqrstvwxyz])te$/', $word, $matches);
 
         if ($contains === 1) {
             return $matches[1];

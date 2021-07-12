@@ -13,7 +13,7 @@ class DisambiguatorSuffixKe extends AbstractDisambiguator implements Disambiguat
     public function disambiguate($word)
     {
         $matches  = null;
-        $contains = preg_match('/^(.*)ke$/', $word, $matches);
+        $contains = preg_match('/^(.*[bcdfghjklmnpqrstvwxyz])ke$/', $word, $matches);
 
         if ($contains === 1) {
             return $matches[1];

@@ -161,7 +161,7 @@ class Context implements ContextInterface, VisitableInterface
         $this->currentWord = $this->originalWord;
 
 // step 2, 3
-       
+        
 
         // step 4, 5
         $this->removePrefixes();
@@ -179,6 +179,29 @@ class Context implements ContextInterface, VisitableInterface
         if ($this->dictionary->contains($this->getCurrentWord())) {
             return;
         }
+
+        $this->removals = [];
+        $this->currentWord = $this->originalWord;
+
+// step 2, 3
+         // step 6,7
+        $this->removeInfixes();
+        if ($this->dictionary->contains($this->getCurrentWord())) {
+            return;
+        }
+
+        // step 4, 5
+        $this->removePrefixes();
+        if ($this->dictionary->contains($this->getCurrentWord())) {
+            return;
+        }
+
+        $this->removeSuffixes();
+        if ($this->dictionary->contains($this->getCurrentWord())) {
+            return;
+        }
+
+        
     }
 
     protected function removePrefixes()
