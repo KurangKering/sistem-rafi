@@ -50,7 +50,7 @@ class DataUjiController extends ResourceController
     public function show_all()
     {   
         $model = new DataUjiModel();
-        $dt = $model->getAllDataUji();
+        $dt = $model->getAll();
         echo $dt;
     }
 
@@ -94,12 +94,12 @@ class DataUjiController extends ResourceController
     {
         $model = new DataUjiModel();
         $kata = $this->request->getPost('kata');
-        $arti_kata = $this->request->getPost('arti_kata');
+        $kata_pakar = $this->request->getPost('kata_pakar');
 
         $data = [
 
             'kata' => $kata,
-            'arti_kata' => $arti_kata
+            'kata_pakar' => $kata_pakar
         ];
 
         $insert_data = $model->insert($data);
@@ -131,11 +131,11 @@ class DataUjiController extends ResourceController
         $model = new DataUjiModel();
         $id = $this->request->getPost('id');
         $kata = $this->request->getPost('kata');
-        $arti_kata = $this->request->getPost('arti_kata');
+        $kata_pakar = $this->request->getPost('kata_pakar');
 
         $data = [
             'kata' => $kata,
-            'arti_kata' => $arti_kata,
+            'kata_pakar' => $kata_pakar,
         ];
 
 

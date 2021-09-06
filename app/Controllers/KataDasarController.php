@@ -50,7 +50,7 @@ class KataDasarController extends ResourceController
     public function show_all()
     {   
         $model = new KataDasarModel();
-        $dt = $model->getAllKataDasar();
+        $dt = $model->getAll();
         echo $dt;
     }
 

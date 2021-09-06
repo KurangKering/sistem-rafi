@@ -74,6 +74,7 @@
 									<th>ID</th>
 									<th>kata</th>
 									<th>kata stemmed</th>
+									<th>kata pakar</th>
 									<th>ketemu</th>
 									<th width="1%">Action</th>
 								</tr>
@@ -190,12 +191,21 @@
 		});
 
 		$("#mulai_pengujian_data_uji_button").click(function(e) {
+			Swal.fire({
+				icon: 'info',
+				title: 'Memproses',
+				text: 'Sedang melakukan stemming',
+				showConfirmButton: false, 
+				allowOutsideClick: false,
+			})
+
 			$.ajax({
 				url: '<?= base_url("pengujian/proses_pengujian_data_uji") ?>',
 				type: 'POST',
 			})
 			.done(function(response) {
 				if (!response.success) {
+					Swal.fire({icon: 'alert', title:"Gagal !", showConfirmButton: false, timer: 1000})
 
 				} else {
 					$("#total-benar").text(response.total_benar);
@@ -218,13 +228,14 @@
 			{ "data": "id" },
 			{ "data": "kata" },
 			{ "data": "kata_stemmed" },
+			{ "data": "kata_pakar" },
 			{ "data": "ketemu" },
 			{ "data": null },
 			],
-			"order": [[3, "desc"]],
+			"order": [[4, "desc"]],
 			"columnDefs": [
 			{
-				"targets": 3,
+				"targets": 4,
 				"data": "ketemu",
 				"visible": false,
 			},

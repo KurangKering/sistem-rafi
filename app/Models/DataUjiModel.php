@@ -16,7 +16,7 @@ class DataUjiModel extends Model
     protected $returnType           = 'array';
     protected $useSoftDeletes       = false;
     protected $protectFields        = true;
-    protected $allowedFields        = ['kata', 'kata_stemmed', 'ketemu'];
+    protected $allowedFields        = ['kata', 'arti_kata', 'kata_stemmed', 'kata_pakar', 'ketemu'];
 
 
 // Dates
@@ -26,10 +26,10 @@ class DataUjiModel extends Model
     /**
     * Mendapatkan semua data uji yang ada di database.
     */
-    public function getAllDataUji()
+    public function getAll()
     {
         $dt = new Datatables(new Codeigniter4Adapter());
-        $dt->query('select id, kata from data_uji');
+        $dt->query('select id, kata, kata_pakar from data_uji');
 
         $dt->add('action', function($q) {
             return '';
@@ -38,10 +38,10 @@ class DataUjiModel extends Model
     }
 
 
-    public function getAllDataUjiMenuPengujian()
+    public function getAllMenuPengujian()
     {
         $dt = new Datatables(new Codeigniter4Adapter());
-        $dt->query('select id, kata, kata_stemmed, ketemu from data_uji');
+        $dt->query('select id, kata, kata_stemmed, kata_pakar, ketemu from data_uji');
 
         $dt->add('action', function($q) {
             return '';

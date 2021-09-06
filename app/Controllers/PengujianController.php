@@ -42,12 +42,12 @@ class PengujianController extends ResourceController
      */
     public function show_all()
     {   
-        $dt = $this->modelDataUji->getAllDataUji();
+        $dt = $this->modelDataUji->getAll();
         echo $dt;
     }
     public function show_all_data_uji_menu_pengujian()
     {   
-        $dt = $this->modelDataUji->getAllDataUjiMenuPengujian();
+        $dt = $this->modelDataUji->getAllMenuPengujian();
         echo $dt;
     }
 
@@ -142,7 +142,7 @@ class PengujianController extends ResourceController
         $stemmed = $stemmer->detailStem($input);
         $arti = [];
         if ($stemmed['ketemu']) {
-            $arti = $kata_dasar_model->getArtiKataDasar($stemmed['hasil']);
+            $arti = $kata_dasar_model->getArti($stemmed['hasil']);
 
         }
         $stemmed['arti'] = $arti;
@@ -178,12 +178,16 @@ class PengujianController extends ResourceController
             $updated_data[$key]['kata_stemmed'] = $result['hasil'];
 
             $ketemu = -1;
-            if ($result['ketemu'] && count($result['rules']) > 0) {
-                $ketemu = 1;
-            } elseif ($result['ketemu']) {
-                $ketemu = 0;
+            if ($result['ketemu']) {
+                if (strtolower($result['hasil']) == strtolower($data['kata_pakar'])) {
+                    if (count($result['rules']) > 0) {
+                        $ketemu = 1;
+                    } else {
+                        $ketemu = 0;
+                    }
+                }
             }
-            
+
             $update_model = array(
                 'kata_stemmed' => $result['hasil'],
                 'ketemu' => $ketemu,
@@ -210,7 +214,7 @@ class PengujianController extends ResourceController
             'akurasi' => round($akurasi, 2) . "%",
         );
 
-      
+
 
         return $this->response->setJSON($response);
 

@@ -30,7 +30,7 @@ class KataDasarModel extends Model
     /**
      * Mendapatkan semua kata dasar yang ada di database.
      */
-    public function getAllKataDasar()
+    public function getAll()
     {
         $dt = new Datatables(new Codeigniter4Adapter());
         $dt->query('select id, kata, arti_kata from kata_dasar');
@@ -49,7 +49,7 @@ class KataDasarModel extends Model
         return $collection;
     }
 
-    public function getArtiKataDasar($kata)
+    public function getArti($kata)
     {
         $arti = $this->where('kata', $kata)->select('arti_kata')->get();
         $list_arti = [];

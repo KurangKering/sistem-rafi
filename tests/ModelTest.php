@@ -9,11 +9,11 @@ use App\Models\KataDasarModel;
 class ModelTest extends TestCase
 {
 
-	public function testModelKataDasarGetArtiKataDasar()
+	public function testModelKataDasargetArti()
 	{
 		$model = new KataDasarModel();
 		$input = 'entan';
-		$arti = $model->getArtiKataDasar($input);
+		$arti = $model->getArti($input);
 		var_dump ($arti);
 		die();
 	}

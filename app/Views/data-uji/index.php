@@ -35,6 +35,7 @@
 								<tr>
 									<th>ID</th>
 									<th>kata</th>
+									<th>kata pakar</th>
 									<th width="1%" style="white-space: nowrap;">Action</th>
 								</tr>
 							</thead>
@@ -60,8 +61,14 @@
 					<input type="hidden" name="id" id="id">
 					<div class="form-group">
 						<label for="kata">kata</label>
-						<textarea name="kata" id="kata" class="form-control"></textarea>
+						<input type="text" name="kata" id="kata" class="form-control">
 					</div>
+					<div class="form-group">
+						<label for="kata">kata pakar</label>
+						<input type="text" name="kata_pakar" id="kata_pakar" class="form-control">
+
+					</div>
+					
 					
 					
 				</div>
@@ -97,7 +104,7 @@
 			let form_data = {
 				id: $("#id").val(),
 				kata: $("#kata").val(),
-				arti_kata: $("#arti_kata").val(),
+				kata_pakar: $("#kata_pakar").val(),
 			};
 
 			$.ajax({
@@ -136,6 +143,7 @@
 			"columns": [
 			{ "data": "id" },
 			{ "data": "kata" },
+			{ "data": "kata_pakar" },
 			{ "data": null },
 			],
 			"columnDefs": [ {
@@ -153,7 +161,7 @@
 
 	function clearDataUjiForm() {
 		$("#kata").val('');
-		$("#arti_kata").val('');
+		$("#kata_pakar").val('');
 		$("#id").val('');
 	}
 
@@ -207,7 +215,7 @@
 			} else {
 				$("#id").val(response.data.id);
 				$("#kata").val(response.data.kata);
-				$("#arti_kata").val(response.data.arti_kata);
+				$("#kata_pakar").val(response.data.kata_pakar);
 				$("#data_uji_modal").modal('show');
 			}
 		});
