@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 	<title>Stemmer Rafi</title>
 
 	<?= $this->include('base_css') ?>  
@@ -37,7 +37,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 					<!-- Left navbar links -->
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a href="<?= base_url('/') ?>" class="nav-link">Dashboard</a>
+							<a href="<?= base_url('/') ?>" class="nav-link">Home</a>
 						</li>
 						<li class="nav-item">
 							<a href="<?= base_url('kata-dasar') ?>" class="nav-link">Data Kata Dasar</a>
