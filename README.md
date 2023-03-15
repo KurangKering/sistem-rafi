@@ -1,56 +1,14 @@
-# CodeIgniter 4 Framework
+# Sistem TA Rafi
 
-## What is CodeIgniter?
+## Last Update 18 September 2021
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+## Screenshot
 
-This repository holds the distributable version of the framework,
-including the user guide. It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
-
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
-
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
-
-
-## Important Change with index.php
-
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use Github issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Contributing
-
-We welcome contributions from the community.
-
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 7.3 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
+![image](https://user-images.githubusercontent.com/20513164/225205803-8aa3078a-78c7-4ee6-b0fd-f0cc11acbe80.png)
+![image](https://user-images.githubusercontent.com/20513164/225205823-dc52e174-4989-4d4f-91f7-8d5b4556dce8.png)
+![image](https://user-images.githubusercontent.com/20513164/225205837-c88a1761-4681-40a6-9fe9-0d8791092f50.png)
+![image](https://user-images.githubusercontent.com/20513164/225205884-d61eb98d-fb69-4df0-830e-77126446e63f.png)
+![image](https://user-images.githubusercontent.com/20513164/225205904-5209431b-082d-4b60-90ce-839ed0a90ed3.png)
+![image](https://user-images.githubusercontent.com/20513164/225205925-19aae534-5877-4b27-a793-06ec11eacdd5.png)
+![image](https://user-images.githubusercontent.com/20513164/225205964-d6d72ae8-b68b-47c4-8a4a-7bd8687adc5b.png)
+![image](https://user-images.githubusercontent.com/20513164/225206528-0985e94b-2e51-4650-8263-6316388f0757.png)
